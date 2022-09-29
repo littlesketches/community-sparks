@@ -150,8 +150,8 @@ svg#canvas{
     transform: translate(540px, 1000px) scale(3.5)
 } 
 .logo{
-    fill:                   var(--he-green);
-    /* fill:                   #fff' */
+    /* fill:                   var(--he-green); */
+    fill:                   #fff;
 }
 
 
@@ -160,16 +160,26 @@ svg#canvas{
 
 /**** HTML CONTROLS OVERLAY *****/
 .controls-container{
-    display:        none;
     position:       fixed;
     bottom:         2.5vh;
+    right:          2.5vh;
 }
 .buttons-container{
     width:              100vw;
     display:            flex;
-    justify-content:    center;
+    justify-content:    end;
     align-content:      center;
 }
 button{
-    margin:         0 0.25vw;
+    margin:                 0 0.25vw;
+    width:                  8vw;
+    height:                 2vw;
+    font-size:              1vw;
+    font-family:            'Maison Neue Mono';
+    background-color:       var(--he-green)
 }
+button:active{
+    background-color:       palevioletred;
+}
+
+/**** PRINT STYLESEHEET*****/

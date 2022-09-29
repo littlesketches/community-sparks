@@ -270,8 +270,10 @@ for(const sheet of settings.sheets){
 anim.controls.playPause = (sheetName, range) => {
     if (state.animation.sheet[sheetName].isPlaying) {
         anim.sheet[sheetName].sequence.pause()
+        anim.sheet.loop.sequence.pause()
     } else {
         anim.sheet[sheetName].sequence.play({ range })
+        anim.sheet.loop.sequence.play()
     }
     state.animation.sheet[sheetName].isPlaying = !state.animation.sheet[sheetName].isPlaying
 };
@@ -280,7 +282,9 @@ anim.controls.restart = (sheetName) => {
     anim.sheet[sheetName].sequence.position = 0
     state.animation.sheet[sheetName].isPlaying = false
     anim.controls.playPause(sheetName)
+
 };
+
 
 
 
@@ -290,14 +294,13 @@ anim.controls.restart = (sheetName) => {
 ////////////////////////////////////////////
 
 
-document.getElementById('btn-play-pause').addEventListener('click', () => {
-    console.log('Play/pause clicked')
-    anim.controls.playPause('intro')
+document.getElementById('btn-play-pause').addEventListener('click', function(){
+    anim.controls.playPause('main')
+    this.innerHTML =  state.animation.sheet.main.isPlaying ? 'Pause' : 'Play'
 })
 
 document.getElementById('btn-restart').addEventListener('click', () => {
-    console.log('Restarting animation')
-    anim.controls.restart('intro')
+    anim.controls.restart('main')
 })
 
 
