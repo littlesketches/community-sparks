@@ -80,6 +80,7 @@ if (typeof studio !== 'undefined') { // Initialise studio
         d3.select('main').classed('debug', true)
     }
     window.studio = studio                              // Make available as global
+    document.querySelector('.controls-container').classList.add('hidden')
 } 
 
 

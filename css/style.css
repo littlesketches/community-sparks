@@ -77,7 +77,7 @@ main.debug{
 }
 
 .debug .svg-container, .debug .overlay-container{
-    height:                 70vh;
+    height:                 40vh;
     border:                 white solid 5px
 }
 
