@@ -78,9 +78,10 @@ if (typeof studio !== 'undefined') { // Initialise studio
         studio.ui.hide()     // Hide UI if specified
     } else {
         d3.select('main').classed('debug', true)
+        document.querySelector('.controls-container').classList.add('hidden')
     }
     window.studio = studio                              // Make available as global
-    document.querySelector('.controls-container').classList.add('hidden')
+
 } 
 
 
