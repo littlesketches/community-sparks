@@ -54,15 +54,21 @@ body{
 
 main{
     margin:                 0;
+    width:              100vw;
     max-width:              100vw;
-    display:                grid;
-    align-content:          start;
-    justify-content:        center;
 }
 
 main.debug{
     justify-content:        start;
     margin-left:            10vw;
+}
+.wrapper{
+    position:               fixed; 
+    top:                    0;
+    width:                  100vw;
+    display:                grid;
+    align-content:          start;
+    justify-content:        center;
 }
 .hidden{
     display:                none;
