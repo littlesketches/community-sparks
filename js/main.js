@@ -3,8 +3,8 @@ import 'https://cdn.jsdelivr.net/npm/@theatre/browser-bundles@0.5.0-insiders.88d
 // import 'https://cdn.jsdelivr.net/npm/@theatre/browser-bundles@0.5.0-insiders.88df1ef/dist/core-only.min.js'         // Production TheatreJS
 import 'https://unpkg.com/external-svg-loader@latest/svg-loader.min.js'
 import 'https://d3js.org/d3.v7.min.js'
-import animState from '../anim/state.json' assert {type: 'json'};
-
+// import animState from '../anim/state.json' assert {type: 'json'};
+import { animState } from '../anim/state.js'
 
 
 //////////////////////////////////////////////
@@ -176,8 +176,10 @@ import animState from '../anim/state.json' assert {type: 'json'};
             // Add animatable attributes
             anim.objBySheet[sheet][id].onValuesChange((obj) => {
                 el.style.transform = `rotate(${obj.rotate}deg) scale(${obj.scale}) translate(${obj.x}px, ${obj.y}px)`
+                el.style.WebkitTransform = `rotate(${obj.rotate}deg) scale(${obj.scale}) translate(${obj.x}px, ${obj.y}px)`
                 el.style.opacity = obj.opacity
                 el.style.transformOrigin = `${bbox.x +(bbox.width * 0.5)}px ${bbox.y + (bbox.height * 0.5)}px`   
+                el.style.WebkitTransformOrigin = `${bbox.x +(bbox.width * 0.5)}px ${bbox.y + (bbox.height * 0.5)}px`   
             })
         }
 
