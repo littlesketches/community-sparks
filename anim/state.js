@@ -7573,7 +7573,7 @@ export const animState = {
                   },
                   {
                     "id": "sHrK86JNF5",
-                    "position": 149.3,
+                    "position": 126.4,
                     "connectedRight": true,
                     "handles": [
                       0.5,
@@ -7585,7 +7585,7 @@ export const animState = {
                   },
                   {
                     "id": "lYmHJDObjr",
-                    "position": 150.067,
+                    "position": 127.167,
                     "connectedRight": true,
                     "handles": [
                       0.5,
@@ -7627,7 +7627,7 @@ export const animState = {
                   },
                   {
                     "id": "pd_iu5NuPs",
-                    "position": 149.3,
+                    "position": 126.4,
                     "connectedRight": true,
                     "handles": [
                       0.5,
@@ -7639,7 +7639,7 @@ export const animState = {
                   },
                   {
                     "id": "boG0PW9HXp",
-                    "position": 150.067,
+                    "position": 127.167,
                     "connectedRight": true,
                     "handles": [
                       0.5,
@@ -8014,7 +8014,7 @@ export const animState = {
                 "keyframes": [
                   {
                     "id": "6zBzfCSi8w",
-                    "position": 103.2,
+                    "position": 128.767,
                     "connectedRight": true,
                     "handles": [
                       0.5,
@@ -8026,7 +8026,7 @@ export const animState = {
                   },
                   {
                     "id": "VKmQvaqQnF",
-                    "position": 106.033,
+                    "position": 131.167,
                     "connectedRight": true,
                     "handles": [
                       0.5,
@@ -8068,7 +8068,7 @@ export const animState = {
                 "keyframes": [
                   {
                     "id": "2W43RVutlq",
-                    "position": 102.633,
+                    "position": 128.767,
                     "connectedRight": true,
                     "handles": [
                       0.5,
@@ -8080,7 +8080,7 @@ export const animState = {
                   },
                   {
                     "id": "bh6Pzh8ktZ",
-                    "position": 106.033,
+                    "position": 131.167,
                     "connectedRight": true,
                     "handles": [
                       0.5,

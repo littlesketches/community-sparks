@@ -1,6 +1,6 @@
 // Import dependencies as modules
-// import 'https://cdn.jsdelivr.net/npm/@theatre/browser-bundles@0.5.0-insiders.88df1ef/dist/core-and-studio.js'    // Studio TheatreJS version
-import 'https://cdn.jsdelivr.net/npm/@theatre/browser-bundles@0.5.0-insiders.88df1ef/dist/core-only.min.js'         // Production TheatreJS
+import 'https://cdn.jsdelivr.net/npm/@theatre/browser-bundles@0.5.0-insiders.88df1ef/dist/core-and-studio.js'    // Studio TheatreJS version
+// import 'https://cdn.jsdelivr.net/npm/@theatre/browser-bundles@0.5.0-insiders.88df1ef/dist/core-only.min.js'         // Production TheatreJS
 import 'https://unpkg.com/external-svg-loader@latest/svg-loader.min.js'
 import 'https://d3js.org/d3.v7.min.js'
 // import animState from '../anim/state.json' assert {type: 'json'};
