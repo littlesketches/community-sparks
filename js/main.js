@@ -273,7 +273,7 @@ import { animState } from '../anim/state.js'
 /// IV. SETUP AUDIO ///
 ///////////////////////
 
-    anim.sheet.main.sequence.attachAudio({ source: '../assets/audio/voiceoverPlus3.mp3' }).then(() => {
+    anim.sheet.main.sequence.attachAudio({ source: './assets/audio/voiceoverPlus3.mp3' }).then(() => {
         console.log('Audio loaded!')
         document.querySelector('.buttons-container ').classList.remove('hidden')
         document.querySelector('.loading-message ').classList.add('hidden')
