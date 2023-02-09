@@ -82,7 +82,7 @@ import { animState } from '../anim/state.js'
         } else {
             d3.select('main').classed('debug', true)
             document.querySelector('.controls-container').classList.add('hidden')
-        }
+       }
         window.studio = studio                              // Make available as global
 
     } 
@@ -269,11 +269,23 @@ import { animState } from '../anim/state.js'
 
 
 
+///////////////////////
+/// IV. SETUP AUDIO ///
+///////////////////////
 
-/////////////////////////////////
-/// IV. ADD PLAYBACK METHODS  ///
-/////////////////////////////////
+    anim.sheet.main.sequence.attachAudio({ source: '../assets/audio/voiceoverPlus3.mp3' }).then(() => {
+        console.log('Audio loaded!')
+        document.querySelector('.buttons-container ').classList.remove('hidden')
+        document.querySelector('.loading-message ').classList.add('hidden')
+        anim.sheet.loop.sequence.play({iterationCount: Infinity})         
 
+    })
+        // document.querySelector('.buttons-container ').classList.remove('hidden')
+        // document.querySelector('.loading-message ').classList.add('hidden')
+
+////////////////////////////////
+/// V. ADD PLAYBACK METHODS  ///
+////////////////////////////////
 
     anim.controls.playPause = (sheetName, range) => {
         if (state.animation.sheet[sheetName].isPlaying) {
@@ -281,7 +293,7 @@ import { animState } from '../anim/state.js'
             anim.sheet.loop.sequence.pause()
         } else {
             anim.sheet[sheetName].sequence.play({ range })
-            anim.sheet.loop.sequence.play()
+            anim.sheet.loop.sequence.play({iterationCount: Infinity})     
         }
         state.animation.sheet[sheetName].isPlaying = !state.animation.sheet[sheetName].isPlaying
     };
@@ -290,12 +302,11 @@ import { animState } from '../anim/state.js'
         anim.sheet[sheetName].sequence.position = 0
         state.animation.sheet[sheetName].isPlaying = false
         anim.controls.playPause(sheetName)
-
     };
 
 
 ////////////////////////////////////////////
-/// V. ADD EVENT LISTENERS FOR PLAYBACK  ///
+/// VI. ADD EVENT LISTENERS FOR PLAYBACK ///
 ////////////////////////////////////////////
 
     switch(settings.ui.type){
@@ -306,7 +317,6 @@ import { animState } from '../anim/state.js'
                 anim.sheet.main.sequence.position = this.scrollY / settings.scroll.pixelsPerSecond
             })
             document.querySelector('.controls-container').classList.add('hidden')
-
             break
 
         case 'buttons':
@@ -322,9 +332,9 @@ import { animState } from '../anim/state.js'
     }
 
 
-////////////////////////////////////////////
-/// VI. ADDITIONAL SETUP                ///
-////////////////////////////////////////////
+/////////////////////////////
+/// VI. ADDITIONAL SETUP  ///
+/////////////////////////////
 
     if (typeof studio !== 'undefined') { // Initialise studio 
         // Fix for TheatreJS studio UI
@@ -337,14 +347,14 @@ import { animState } from '../anim/state.js'
                 console.log('Fixed scrollable list')
             }
 
-            anim.sheet.loop.sequence.play({iterationCount: Infinity})
+   
         }, 500);
     }
 
 
-/////////////////////////////
-/// X. HELPER FUNCTIONS   ///
-/////////////////////////////
+////////////////////////////
+/// X. HELPER FUNCTIONS  ///
+////////////////////////////
 
     // SVG text wrapping
     function textWrap(text, width, lineHeight){
